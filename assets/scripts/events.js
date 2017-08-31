@@ -10,7 +10,6 @@ const clickCounter = function () {
 
 const XorO = function () {
   clickCounter()
-  console.log(clicks)
   if (clicks % 2 === 0) {
     return 'X'
   } else {
@@ -19,11 +18,17 @@ const XorO = function () {
 }
 
 const play = function () {
-  $('#box1').text(XorO)
+  if ($(this).text() === 'X') {
+    return 'X'
+  } else if ($(this).text() === 'O') {
+    return 'O'
+  } else {
+    $(this).text(XorO)
+  }
 }
 
 const click = function () {
-  $('#box1').on('click', play)
+  $("div[id^='box']").on('click', play)
 }
 
 module.exports = {
