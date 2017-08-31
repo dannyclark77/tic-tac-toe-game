@@ -1,6 +1,32 @@
 'use strict'
 
-const position = ['#box1', '#box2', '#box3', '#box4', '#box5', '#box6', '#box7', '#box8', '#box9']
+const winner = function () {
+  if (($('#box1').text() === $('#box2').text() && $('#box2').text() === $('#box3').text()) && ($('#box1').text() === 'X' || $('#box1').text() === 'O')) {
+    $('.winner').text($('#box1').text() + ' WON!!!')
+    $("div[id^='box']").off()
+  } else if (($('#box1').text() === $('#box5').text() && $('#box5').text() === $('#box9').text()) && ($('#box1').text() === 'X' || $('#box1').text() === 'O')) {
+    $('.winner').text($('#box1').text() + ' WON!!!')
+    $("div[id^='box']").off()
+  } else if (($('#box1').text() === $('#box4').text() && $('#box4').text() === $('#box7').text()) && ($('#box1').text() === 'X' || $('#box1').text() === 'O')) {
+    $('.winner').text($('#box1').text() + ' WON!!!')
+    $("div[id^='box']").off()
+  } else if (($('#box2').text() === $('#box5').text() && $('#box5').text() === $('#box8').text()) && ($('#box2').text() === 'X' || $('#box2').text() === 'O')) {
+    $('.winner').text($('#box2').text() + ' WON!!!')
+    $("div[id^='box']").off()
+  } else if (($('#box3').text() === $('#box6').text() && $('#box6').text() === $('#box9').text()) && ($('#box3').text() === 'X' || $('#box3').text() === 'O')) {
+    $('.winner').text($('#box3').text() + ' WON!!!')
+    $("div[id^='box']").off()
+  } else if (($('#box4').text() === $('#box5').text() && $('#box5').text() === $('#box6').text()) && ($('#box4').text() === 'X' || $('#box4').text() === 'O')) {
+    $('.winner').text($('#box4').text() + ' WON!!!')
+    $("div[id^='box']").off()
+  } else if (($('#box3').text() === $('#box5').text() && $('#box5').text() === $('#box7').text()) && ($('#box3').text() === 'X' || $('#box3').text() === 'O')) {
+    $('.winner').text($('#box3').text() + ' WON!!!')
+    $("div[id^='box']").off()
+  } else if (($('#box7').text() === $('#box8').text() && $('#box8').text() === $('#box9').text()) && ($('#box7').text() === 'X' || $('#box7').text() === 'O')) {
+    $('.winner').text($('#box7').text() + ' WON!!!')
+    $("div[id^='box']").off()
+  }
+}
 
 let clicks = 0
 
@@ -11,10 +37,11 @@ const clickCounter = function () {
 const XorO = function () {
   clickCounter()
   if (clicks % 2 === 0) {
-    return 'X'
+    $(this).text('O')
   } else {
-    return 'O'
+    $(this).text('X')
   }
+  winner()
 }
 
 const play = function () {
@@ -32,5 +59,6 @@ const click = function () {
 }
 
 module.exports = {
-  click
+  click,
+  winner
 }
