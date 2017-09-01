@@ -58,7 +58,20 @@ const click = function () {
   $("div[id^='box']").on('click', play)
 }
 
+const newGame = function () {
+  $("div[id^='box']").text('')
+  if (clicks % 2 === 0) {
+    clickCounter()
+  }
+  $("div[id^='box']").on('click', play)
+}
+
+const newGameClick = function () {
+  $('#new-game').on('click', newGame)
+}
+
 module.exports = {
   click,
-  winner
+  winner,
+  newGameClick
 }

@@ -26,3 +26,7 @@ $(() => {
 $(() => {
   authEvents.addHandlers()
 })
+
+$(() => {
+  event.newGameClick()
+})
