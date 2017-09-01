@@ -25,13 +25,19 @@ const winner = function () {
   } else if (($('#box7').text() === $('#box8').text() && $('#box8').text() === $('#box9').text()) && ($('#box7').text() === 'X' || $('#box7').text() === 'O')) {
     $('.winner').text($('#box7').text() + ' WON!!!')
     $("div[id^='box']").off()
+  } else if (clicks >= 9) {
+    $('.winner').text('Draw game. There is no winner')
   }
 }
 
 let clicks = 0
 
 const clickCounter = function () {
+  if (clicks > 8) {
+    clicks = 0
+  }
   clicks += 1
+  console.log(clicks)
 }
 
 const XorO = function () {
@@ -58,11 +64,9 @@ const click = function () {
   $("div[id^='box']").on('click', play)
 }
 
-const newGame = function () {
+const newGame = function (event) {
+  event.preventDefault()
   $("div[id^='box']").text('')
-  if (clicks % 2 === 0) {
-    clickCounter()
-  }
   $("div[id^='box']").on('click', play)
 }
 
