@@ -13,6 +13,9 @@
     </head>
     <body>
       <header>
+        TIC TAC TOE
+      </header>
+      <section>
         <form id="sign-up">
           <fieldset>
             <legend>Sign up!</legend>
@@ -44,19 +47,16 @@
           <input type="submit" name="submit" value="Sign Out">
         </fieldset>
       </form>
-      <p id="authMessage"></p>
-    </header>
-      <section class="winner">
-      </section>
+    </section>
+    <p id="authMessage"></p>
+    <section class="gameButtons">
       <form id="new-game">
         <fieldset>
-          <legend>New Game</legend>
           <button type="submit" class="btn btn-default">New Game</button>
         </fieldset>
       </form>
       <form id="restart-game">
         <fieldset>
-          <legend>Restart Game</legend>
           <button type="submit" class="btn btn-default">Restart Game</button>
         </fieldset>
       </form>
@@ -66,11 +66,12 @@
         <button type="submit" class="btn btn-default">Get User Data!</button>
         <p id="totalGames"></p>
       </form>
-      <form id="get-game">
+      <!-- <form id="get-game">
         <input type="text" name="game[id]" id="game-id" placeholder="Game ID Here">
         <button type="submit" class="btn btn-default">Get Game</button>
         <p id="gameData"></p>
-      </form>
+      </form> -->
+    </section>
       <div class="container">
         <div class="row">
           <div class="box" id="box1" data-id=0>
@@ -97,5 +98,7 @@
           </div>
         </div>
       </div>
+      <section class="winner">
+      </section>
     </body>
 </html>

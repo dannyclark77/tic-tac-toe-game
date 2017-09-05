@@ -1,11 +1,12 @@
 'use strict'
 
 const store = require('../store')
+const gameEvents = require('../game/events')
 
 const signUpSuccess = function (data) {
-  console.log(data)
-  console.log('Successfully signed up!')
-  $('#authMessage').text('Sign Up Successful!')
+  $('#authMessage').text('Sign Up Successful! Sign in to continue.')
+  $('#change-password').show()
+  $('#sign-out').show()
 }
 
 const signUpFailure = function (error) {
@@ -14,10 +15,15 @@ const signUpFailure = function (error) {
 }
 
 const signInSuccess = function (data) {
-  console.log(data)
-  console.log('Successfully signed in')
   store.user = data.user
-  $('#authMessage').text('Sign In Successful!')
+  $('#authMessage').text('Sign-In Successful. Select \'New Game\' to Begin.')
+  $('#change-password').show()
+  $('#sign-out').show()
+  $('#sign-up').hide()
+  $('#sign-in').hide()
+  $('#new-game').show()
+  $('#get-games').show()
+  $('.container').show()
 }
 
 const signInFailure = function (error) {
@@ -36,9 +42,16 @@ const changePasswordFailure = function (error) {
 }
 
 const signOutSuccess = function (data) {
-  console.log('Successfully signed out')
   store.user = null
   $('#authMessage').text('Sign Out Successful!')
+  $('#sign-up').show()
+  $('#sign-in').show()
+  $('#change-password').hide()
+  $('#sign-out').hide()
+  $('#get-games').hide()
+  $('.container').hide()
+  $('#restart-game').hide()
+  $('.winner').text('')
 }
 
 const signOutFailure = function (error) {

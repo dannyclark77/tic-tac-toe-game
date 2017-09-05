@@ -36,7 +36,7 @@ const winner = function () {
     $("div[id^='box']").off()
     store.game.over = true
   } else if (clicks >= 9) {
-    $('.winner').text('Draw game. There is no winner')
+    $('.winner').text('There is no winner.')
     store.game.over = true
   }
 }

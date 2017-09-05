@@ -4,10 +4,13 @@ const store = require('../store')
 
 const createGameSuccess = function (data) {
   store.game = data.game
+  $('#restart-game').show()
+  $('#new-game').hide()
+  $('#authMessage').text('')
 }
 
 const createGameFailure = function (response) {
-  console.error(response)
+  $('#authMessage').text('Please sign in to continue')
 }
 
 const updateGameSuccess = function (data) {
