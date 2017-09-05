@@ -19,7 +19,8 @@ const updateGameFailure = function (response) {
 }
 
 const getGamesSuccess = function (data) {
-  console.log(data)
+  $('#totalGames').text('Total Games Played = ' + data.games.length)
+  console.log(data.games.length)
 }
 
 const getGamesFailure = function (response) {

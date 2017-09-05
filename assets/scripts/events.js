@@ -85,6 +85,7 @@ const newGame = function (event) {
   gameArray = ['', '', '', '', '', '', '', '', '']
   clicks = 0
   $("div[id^='box']").on('click', play)
+  $('.winner').text('')
 }
 
 const newGameClick = function () {

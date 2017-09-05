@@ -38,9 +38,6 @@ const onGetGames = function (event) {
 let clicks = 0
 
 const clickCounter = function () {
-  if (clicks > 8) {
-    clicks = 0
-  }
   clicks += 1
 }
 
@@ -55,6 +52,7 @@ const XorO = function () {
 
 const onRestartGame = function (event) {
   event.preventDefault()
+  clicks = 0
   onCreateGame(event)
   $("div[id^='box']").on('click', function () {
     onUpdateGame($(this).data('id'), XorO)
