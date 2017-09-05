@@ -14,6 +14,7 @@ section {
 #authMessage {
   font-size: 20px;
   text-align: center;
+  clear: both;
 }
 
 .box {
@@ -55,7 +56,6 @@ section {
 #change-password {
   display: none;
   text-align: left;
-
 }
 
 #sign-out {
@@ -90,8 +90,4 @@ section {
 
 #sign-out {
   float: right;
-}
-
-#authMessage {
-  clear: both;
 }
