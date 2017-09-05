@@ -2,7 +2,7 @@
 
 const config = require('../config')
 const store = require('../store')
-const events = require('../events')
+// const events = require('../events')
 
 const createGame = function (data) {
   return $.ajax({
@@ -26,7 +26,7 @@ const updateGame = function (data) {
   })
 }
 
-const index = function (data) {
+const index = function () {
   return $.ajax({
     url: config.apiOrigin + '/games/',
     method: 'GET',

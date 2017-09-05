@@ -19,7 +19,7 @@ const updateGameFailure = function (response) {
 }
 
 const getGamesSuccess = function (data) {
-  console.log(store)
+  console.log(data)
 }
 
 const getGamesFailure = function (response) {

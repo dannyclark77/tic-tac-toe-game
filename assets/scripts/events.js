@@ -42,7 +42,7 @@ const winner = function () {
 }
 
 let clicks = 0
-let gameArray = []
+let gameArray = ['', '', '', '', '', '', '', '', '']
 
 const clickCounter = function () {
   if (clicks > 8) {
@@ -55,13 +55,14 @@ const XorO = function () {
   clickCounter()
   if (clicks % 2 === 0) {
     $(this).text('O')
-    gameArray[clicks - 1] = ('O')
+    gameArray[$(this).data('id')] = ('O')
   } else {
     $(this).text('X')
-    gameArray[clicks - 1] = ('X')
+    gameArray[$(this).data('id')] = ('X')
   }
   winner()
   store.game.cells = gameArray
+  console.log(gameArray)
 }
 
 const play = function () {
@@ -81,13 +82,14 @@ const play = function () {
 const newGame = function (event) {
   event.preventDefault()
   $("div[id^='box']").text('')
-  gameArray = []
+  gameArray = ['', '', '', '', '', '', '', '', '']
   clicks = 0
   $("div[id^='box']").on('click', play)
 }
 
 const newGameClick = function () {
   $('#new-game').on('click', newGame)
+  $('#restart-game').on('click', newGame)
 }
 
 module.exports = {
