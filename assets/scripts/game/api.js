@@ -35,8 +35,19 @@ const index = function () {
   })
 }
 
+const showGame = function (id) {
+  return $.ajax({
+    url: config.apiOrigin + '/games/' + id,
+    method: 'GET',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    }
+  })
+}
+
 module.exports = {
   createGame,
   updateGame,
-  index
+  index,
+  showGame
 }

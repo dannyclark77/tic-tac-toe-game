@@ -62,7 +62,6 @@ const XorO = function () {
   }
   winner()
   store.game.cells = gameArray
-  console.log(gameArray)
 }
 
 const play = function () {
@@ -74,10 +73,6 @@ const play = function () {
     $(this).text(XorO)
   }
 }
-
-// const click = function () {
-//   $("div[id^='box']").on('click', play)
-// }
 
 const newGame = function (event) {
   event.preventDefault()
@@ -94,7 +89,6 @@ const newGameClick = function () {
 }
 
 module.exports = {
-  // click,
   winner,
   newGameClick,
   clicks,

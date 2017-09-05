@@ -20,10 +20,18 @@ const updateGameFailure = function (response) {
 
 const getGamesSuccess = function (data) {
   $('#totalGames').text('Total Games Played = ' + data.games.length)
-  console.log(data.games.length)
+  console.log(data.games)
 }
 
 const getGamesFailure = function (response) {
+  console.error(response)
+}
+
+const getGameSuccess = function (data) {
+  $('#gameData').text(data)
+}
+
+const getGameFailure = function (response) {
   console.error(response)
 }
 
@@ -33,5 +41,7 @@ module.exports = {
   updateGameSuccess,
   updateGameFailure,
   getGamesSuccess,
-  getGamesFailure
+  getGamesFailure,
+  getGameSuccess,
+  getGameFailure
 }

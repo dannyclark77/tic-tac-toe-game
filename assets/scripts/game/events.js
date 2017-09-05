@@ -59,6 +59,15 @@ const onRestartGame = function (event) {
   })
 }
 
+// const onGetGame = function (event) {
+//   event.preventDefault()
+//   const data = getFormFields(event.target)
+//   const game = data.games
+//   gameApi.showGame(game.id)
+//     .then(gameUi.getGameSuccess)
+//     .catch(gameUi.getGameFailure)
+// }
+
 const gameHandlers = function () {
   $('#new-game').on('click', onCreateGame)
   $("div[id^='box']").on('click', function () {
@@ -66,6 +75,7 @@ const gameHandlers = function () {
   })
   $('#get-games').on('click', onGetGames)
   $('#restart-game').on('click', onRestartGame)
+  // $('#get-game').on('click', onGetGame)
 }
 
 module.exports = {
