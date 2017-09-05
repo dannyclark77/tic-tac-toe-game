@@ -14,20 +14,16 @@ const createGameFailure = function (response) {
 }
 
 const updateGameSuccess = function (data) {
-  console.log(store.game)
 }
 
 const updateGameFailure = function (response) {
-  console.error(response)
 }
 
 const getGamesSuccess = function (data) {
   $('#totalGames').text('Total Games Played = ' + data.games.length)
-  console.log(data.games)
 }
 
 const getGamesFailure = function (response) {
-  console.error(response)
 }
 
 const getGameSuccess = function (data) {
@@ -35,7 +31,6 @@ const getGameSuccess = function (data) {
 }
 
 const getGameFailure = function (response) {
-  console.error(response)
 }
 
 module.exports = {

@@ -1,7 +1,6 @@
 'use strict'
 
 const store = require('../store')
-const gameEvents = require('../game/events')
 
 const signUpSuccess = function (data) {
   $('#authMessage').text('Sign Up Successful! Sign in to continue.')
@@ -9,8 +8,7 @@ const signUpSuccess = function (data) {
   $('#sign-out').show()
 }
 
-const signUpFailure = function (error) {
-  console.error(error)
+const signUpFailure = function () {
   $('#authMessage').text('Sign Up Unsuccessful')
 }
 
@@ -26,18 +24,15 @@ const signInSuccess = function (data) {
   $('.container').show()
 }
 
-const signInFailure = function (error) {
-  console.error(error)
+const signInFailure = function () {
   $('#authMessage').text('Sign In Unsuccessful')
 }
 
 const changePasswordSuccess = function (data) {
-  console.log('Successfully changed password')
   $('#authMessage').text('Password Successfully Changed!')
 }
 
-const changePasswordFailure = function (error) {
-  console.error(error)
+const changePasswordFailure = function () {
   $('#authMessage').text('Password Change Unsuccessful')
 }
 
@@ -54,8 +49,7 @@ const signOutSuccess = function (data) {
   $('.winner').text('')
 }
 
-const signOutFailure = function (error) {
-  console.error(error)
+const signOutFailure = function () {
   $('#authMessage').text('Sign Out Unsuccessful!')
 }
 
