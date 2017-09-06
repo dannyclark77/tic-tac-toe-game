@@ -22,6 +22,7 @@ const signInSuccess = function (data) {
   $('#new-game').show()
   $('#get-games').show()
   $('.container').show()
+  $('#sign-up').trigger('reset')
 }
 
 const signInFailure = function () {
