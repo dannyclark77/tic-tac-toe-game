@@ -7,6 +7,7 @@ const createGameSuccess = function (data) {
   $('#restart-game').show()
   $('#new-game').hide()
   $('#authMessage').text('')
+  $('#totalGames').text('')
 }
 
 const createGameFailure = function (response) {
