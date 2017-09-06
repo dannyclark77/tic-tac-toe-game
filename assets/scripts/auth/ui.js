@@ -4,8 +4,7 @@ const store = require('../store')
 
 const signUpSuccess = function (data) {
   $('#authMessage').text('Sign Up Successful! Sign in to continue.')
-  $('#change-password').show()
-  $('#sign-out').show()
+  $('#sign-up').trigger('reset')
 }
 
 const signUpFailure = function () {
@@ -15,6 +14,7 @@ const signUpFailure = function () {
 const signInSuccess = function (data) {
   store.user = data.user
   $('#authMessage').text('Sign-In Successful. Select \'New Game\' to Begin.')
+  $('#sign-in').trigger('reset')
   $('#change-password').show()
   $('#sign-out').show()
   $('#sign-up').hide()
@@ -30,6 +30,7 @@ const signInFailure = function () {
 
 const changePasswordSuccess = function (data) {
   $('#authMessage').text('Password Successfully Changed!')
+  $('#change-password').trigger('reset')
 }
 
 const changePasswordFailure = function () {
