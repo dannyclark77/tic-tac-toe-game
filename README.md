@@ -17,3 +17,5 @@ on what move I should make so I can learn.
 4. As an avid social gamer, I want to be able to play against my friends.
 
 I was only able to accomplish 1 of the 4 user stories listed, and given more time, I would hope to be able to tackle the other 3 to create a more dynamic gaming experience.
+
+Link to my original wireframe: https://imgur.com/a/uwqEk
