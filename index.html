@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Tic-Tac-Toe Game</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- Do not add `link` tags-->
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+      <!-- Do not add `script` tags-->
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+    </head>
+    <body>
+      <header>
+        TIC TAC TOE
+      </header>
+      <section>
+        <form id="sign-up">
+          <fieldset>
+            <legend>Sign Up</legend>
+            <input type="text" name="credentials[email]" placeholder="Email">
+            <input type="text" name="credentials[password]" placeholder="Password">
+            <input type="text" name="credentials[password_confirmation]" placeholder="Password Confirmation">
+            <input type="submit" name="submit" value="Sign up!">
+          </fieldset>
+        </form>
+        <form id="sign-in">
+        <fieldset>
+          <legend>Sign In</legend>
+          <input type="text" name="credentials[email]" placeholder="Email">
+          <input type="text" name="credentials[password]" placeholder="Password">
+          <input type="submit" name="submit" value="Sign in!">
+        </fieldset>
+      </form>
+      <form id="change-password">
+        <fieldset>
+          <legend>Change Password</legend>
+          <input type="text" name="passwords[old]" placeholder="Old Password">
+          <input type="text" name="passwords[new]" placeholder="New Password">
+          <input type="submit" name="submit" value="Change Password!">
+        </fieldset>
+      </form>
+      <form id="sign-out">
+        <fieldset>
+          <legend>Sign Out</legend>
+          <input type="submit" name="submit" value="Sign Out">
+        </fieldset>
+      </form>
+    </section>
+    <p id="authMessage"></p>
+    <section class="gameButtons">
+      <form id="new-game">
+        <fieldset>
+          <button type="submit" class="btn btn-default">New Game</button>
+        </fieldset>
+      </form>
+      <form id="restart-game">
+        <fieldset>
+          <button type="submit" class="btn btn-default">Restart Game</button>
+        </fieldset>
+      </form>
+      <form id="update-game">
+      </form>
+      <form id="get-games">
+        <button type="submit" class="btn btn-default">Get User Data!</button>
+        <p id="totalGames"></p>
+      </form>
+      <!-- <form id="get-game">
+        <input type="text" name="game[id]" id="game-id" placeholder="Game ID Here">
+        <button type="submit" class="btn btn-default">Get Game</button>
+        <p id="gameData"></p>
+      </form> -->
+    </section>
+      <div class="container">
+        <div class="row">
+          <div class="box" id="box1" data-id=0>
+          </div>
+          <div class="box" id="box2" data-id=1>
+          </div>
+          <div class="box" id="box3" data-id=2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="box" id="box4" data-id=3>
+          </div>
+          <div class="box" id="box5" data-id=4>
+          </div>
+          <div class="box" id="box6" data-id=5>
+          </div>
+        </div>
+        <div class="row">
+          <div class="box" id="box7" data-id=6>
+          </div>
+          <div class="box" id="box8" data-id=7>
+          </div>
+          <div class="box" id="box9" data-id=8>
+          </div>
+        </div>
+      </div>
+      <section class="winner">
+      </section>
+    </body>
+</html>
